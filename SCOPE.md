@@ -23,6 +23,7 @@ Each file in [`.out-of-scope/`](./.out-of-scope/) records one rejected concept a
 
 - [`frozen-misc-skills.md`](./.out-of-scope/frozen-misc-skills.md)
 - [`harness-name-collisions.md`](./.out-of-scope/harness-name-collisions.md)
+- [`lazy-load-writing-for-agents.md`](./.out-of-scope/lazy-load-writing-for-agents.md)
 - [`mainstream-issue-trackers-only.md`](./.out-of-scope/mainstream-issue-trackers-only.md)
 - [`native-question-tool.md`](./.out-of-scope/native-question-tool.md)
 - [`new-skills.md`](./.out-of-scope/new-skills.md)
