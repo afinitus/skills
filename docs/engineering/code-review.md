@@ -58,7 +58,7 @@ One answer is to remove Claude Code's built-in skills entirely. That saves a lot
 
 **Its sub-agents keep invoking `/code-review` again and spawn more agents.**
 
-This is a known open bug. Several people have reproduced it, in more than one harness. The Standards and Spec prompts do not forbid delegation, so a sub-agent can find the skill again and fan out again. One report reached more than 50 agents. The fix people have applied on forks is one line appended to both sub-agent briefs: "Do not invoke `/code-review` or spawn additional agents: perform this review directly." Some prefer to handle it at the harness level so every skill inherits the guard. Neither is in the shipped skill yet. If you run this unattended, watch the agent count.
+This is a known problem that the skill will not fix: guards against sub-agent recursion are out of scope, because the harness should stop it ([`subagent-recursion.md`](https://github.com/mattpocock/skills/blob/main/.out-of-scope/subagent-recursion.md)). Several people have reproduced it, in more than one harness. The Standards and Spec prompts do not forbid delegation, so a sub-agent can find the skill again and fan out again. One report reached more than 50 agents. The fix people have applied on forks is one line appended to both sub-agent briefs: "Do not invoke `/code-review` or spawn additional agents: perform this review directly." The skill does not ship that line; report runaway fan-out to your harness. If you run this unattended, watch the agent count.
 
 **Should I run it in the same [session](https://www.aihero.dev/ai-coding-dictionary/session) that wrote the code?**
 
